@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
 <title>全国50寺院調査から見えた「生き残るお寺」5つの共通点</title>
 <style>
 :root {
@@ -194,10 +193,19 @@ body{
 .checklist-title{font-size:.9rem;font-weight:700;color:var(--brown);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;}
 .check-group{margin-bottom:1.2rem;}
 .check-group-label{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.07em;margin-bottom:.4rem;padding-bottom:.3rem;border-bottom:1px solid var(--border);}
-.check-item{display:flex;align-items:flex-start;gap:.6rem;padding:.3rem 0;font-size:.84rem;line-height:1.55;}
-.check-box{flex-shrink:0;width:18px;height:18px;border:2px solid var(--border);border-radius:4px;margin-top:.1rem;}
-.score-bar{background:var(--paper);border-radius:10px;padding:.8rem 1rem;margin-top:.8rem;text-align:center;font-size:.82rem;color:var(--muted);}
-.score-bar strong{color:var(--brown);font-size:1rem;}
+.check-item{display:flex;align-items:flex-start;gap:.6rem;padding:.35rem 0;font-size:.84rem;line-height:1.55;cursor:pointer;position:relative;}
+.check-item:hover .check-box-visual{border-color:var(--brown);}
+.check-input{display:none;}
+.check-box-visual{flex-shrink:0;width:22px;height:22px;border:2px solid var(--border);border-radius:5px;margin-top:.08rem;transition:background .15s,border-color .15s;display:flex;align-items:center;justify-content:center;background:#fff;}
+.check-input:checked ~ .check-box-visual{background:var(--brown);border-color:var(--brown);}
+.check-box-visual::after{content:'✓';color:transparent;font-size:.82rem;font-weight:700;line-height:1;transition:color .15s;}
+.check-input:checked ~ .check-box-visual::after{color:#fff;}
+.check-item-text{flex:1;}
+.score-bar{background:var(--paper);border-radius:10px;padding:.9rem 1rem;margin-top:.8rem;text-align:center;font-size:.82rem;color:var(--muted);}
+.score-bar strong{color:var(--brown);font-size:1.15rem;}
+.score-track{background:#e0d8d0;border-radius:10px;height:10px;overflow:hidden;margin:.55rem auto;max-width:280px;}
+.score-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:10px;transition:width .4s ease;width:0%;}
+.score-stage{font-weight:700;margin-top:.3rem;font-size:.88rem;transition:color .3s;}
 
 /* ─── SUMMARY ─── */
 .summary-section{
@@ -300,10 +308,10 @@ footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.75rem;l
       <div class="evidence">
         <div class="evidence-label">📍 調査事例より</div>
         <ul class="evidence-list">
-          <li>「生きる意味が分からない、人間関係に悩む社会人・経営者」→ 福厳寺（YouTube70万人）</li>
-          <li>「大切な人を亡くした悲しみを誰にも話せない人」→ なごみ庵（死の体験旅行®）</li>
-          <li>「仏教をわかりやすく知りたい20〜40代入門者」→ 天明寺（YouTube仏教系）</li>
-          <li>「お寺が怖い・敷居が高いと感じる若い女性」→ 信行寺（Instagram2万人）</li>
+          <li>「生きる意味が分からない、人間関係に悩む社会人・経営者」→ <strong>福厳寺</strong>（愛知県小牧市・曹洞宗／YouTube登録70万人超）</li>
+          <li>「大切な人を亡くした悲しみを誰にも話せない人」→ <strong>なごみ庵</strong>（神奈川県横浜市・浄土宗／死の体験旅行®）</li>
+          <li>「仏教をわかりやすく知りたい20〜40代入門者」→ <strong>天明寺</strong>（群馬県前橋市・真言宗豊山派／YouTube発信）</li>
+          <li>「お寺が怖い・敷居が高いと感じる若い女性」→ <strong>信行寺</strong>（福岡県糟屋郡宇美町・浄土真宗本願寺派／Instagram2万人）</li>
         </ul>
       </div>
 
@@ -330,10 +338,10 @@ footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.75rem;l
       <div class="evidence">
         <div class="evidence-label">📍 調査事例より</div>
         <ul class="evidence-list">
-          <li>YouTube動画（無料）→ コメントで相談 → 来寺・法事受注（福厳寺・天明寺）</li>
-          <li>Instagram投稿（無料）→ DM相談 → 永代供養・相談面談（信行寺・光照寺）</li>
-          <li>無料坐禅会 → 精進料理体験（有料）→ 宿坊予約（建長寺・龍雲寺）</li>
-          <li>note記事（無料）→ オンライン法話申込 → 有料セミナー（正山寺）</li>
+          <li>YouTube動画（無料）→ コメントで相談 → 来寺・法事受注（<strong>福厳寺</strong>：愛知県小牧市・曹洞宗 ／ <strong>天明寺</strong>：群馬県前橋市・真言宗豊山派）</li>
+          <li>Instagram投稿（無料）→ DM相談 → 永代供養・相談面談（<strong>信行寺</strong>：福岡県糟屋郡宇美町・浄土真宗本願寺派 ／ <strong>光明寺</strong>：東京都・浄土宗）</li>
+          <li>無料坐禅会・体験イベント → 有料プログラム → 長期ファン化（<strong>龍雲寺禅堂</strong>：長野県佐久市・曹洞宗）</li>
+          <li>note記事（無料）→ オンライン法話申込 → 有料グリーフケアセミナー（<strong>正山寺</strong>：愛知県名古屋市・曹洞宗）</li>
         </ul>
       </div>
 
@@ -360,10 +368,10 @@ footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.75rem;l
       <div class="evidence">
         <div class="evidence-label">📍 調査事例より</div>
         <ul class="evidence-list">
-          <li>ヒューマンビートボックスをする副住職の動画 → 「お坊さんって面白い」で拡散（平成院）</li>
-          <li>住職が自分の悩みや失敗を正直に語る → 「このお坊さんに話したい」（信行寺 松本紹継）</li>
-          <li>料理好きの住職が精進料理を毎日投稿 → 料理目当てのファンが来寺（成道寺）</li>
-          <li>住職が英語で禅の法話 → 外国人から予約が殺到（退蔵院）</li>
+          <li>ヒューマンビートボックスをする副住職の動画 → 「お坊さんって面白い」で拡散（<strong>平成院</strong>：岩手県洋野町・曹洞宗）</li>
+          <li>住職が自分の悩みや失敗を正直に語る → 「このお坊さんに話したい」（<strong>信行寺</strong>・松本紹継住職：福岡県糟屋郡宇美町・浄土真宗本願寺派）</li>
+          <li>仏教行事・法話をSNSで発信 → 檀家外からの問合せ急増（<strong>龍岸寺</strong>：京都市下京区・浄土宗）</li>
+          <li>住職が英語で禅の法話を発信 → 外国人から予約が殺到（<strong>退蔵院</strong>：京都市右京区・臨済宗妙心寺派）</li>
         </ul>
       </div>
 
@@ -390,11 +398,11 @@ footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.75rem;l
       <div class="evidence">
         <div class="evidence-label">📍 調査事例より（収益の多角化パターン）</div>
         <ul class="evidence-list">
-          <li>YouTube広告収益 + 書籍・オンラインスクール月額（福厳寺・大愚道場）</li>
-          <li>坐禅・写経体験（日本人3,000円、外国人8,000円〜）＋宿坊（建長寺・恵光院）</li>
-          <li>グリーフケア面談料（1回5,000〜15,000円）＋研修講師料（正山寺）</li>
-          <li>永代供養一括払い（30〜150万円）＋法事都度明朗会計（大法寺）</li>
-          <li>会員制月額（コンサート・婚活・終活）＋7万人会員（築地本願寺）</li>
+          <li>YouTube広告収益 ＋ 書籍・オンラインスクール月額（<strong>福厳寺</strong>・大愚道場：愛知県小牧市・曹洞宗）</li>
+          <li>坐禅・写経体験（日本人3,000円〜、外国人8,000円〜）＋宿坊（<strong>高野山恵光院</strong>：和歌山県高野町・真言宗）</li>
+          <li>グリーフケア面談料（1回5,000〜15,000円）＋研修講師料（<strong>正山寺</strong>：愛知県名古屋市・曹洞宗）</li>
+          <li>永代供養一括払い（30〜150万円）＋法事都度明朗会計（<strong>大法寺</strong>：徳島県・浄土真宗）</li>
+          <li>会員制月額（コンサート・婚活・終活）＋7万人会員（<strong>築地本願寺</strong>：東京都中央区・浄土真宗本願寺派）</li>
         </ul>
       </div>
 
@@ -610,35 +618,37 @@ footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.75rem;l
 
     <div class="check-group">
       <div class="check-group-label">基盤（まずここから）</div>
-      <div class="check-item"><div class="check-box"></div>「うちのお寺が解決できる悩み」を一行で言える</div>
-      <div class="check-item"><div class="check-box"></div>Googleマイビジネスに写真・電話・住所が正確に登録されている</div>
-      <div class="check-item"><div class="check-box"></div>HPに「費用の目安」が明記されている</div>
-      <div class="check-item"><div class="check-box"></div>LINE・メールで問い合わせできる導線がある</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">「うちのお寺が解決できる悩み」を一行で言える</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">Googleマイビジネスに写真・電話・住所が正確に登録されている</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">HPに「費用の目安」が明記されている</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">LINE・メールで問い合わせできる導線がある</span></label>
     </div>
 
     <div class="check-group">
       <div class="check-group-label">発信（信頼を作る）</div>
-      <div class="check-item"><div class="check-box"></div>SNS（Instagram・YouTube等）で月2回以上発信している</div>
-      <div class="check-item"><div class="check-box"></div>住職・担当者の「顔」「考え方」が分かるコンテンツがある</div>
-      <div class="check-item"><div class="check-box"></div>発信内容は「お知らせ」ではなく「価値・共感・悩みへの答え」になっている</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">SNS（Instagram・YouTube等）で月2回以上発信している</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">住職・担当者の「顔」「考え方」が分かるコンテンツがある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">発信内容は「お知らせ」ではなく「価値・共感・悩みへの答え」になっている</span></label>
     </div>
 
     <div class="check-group">
       <div class="check-group-label">接続（檀家外とつながる）</div>
-      <div class="check-item"><div class="check-box"></div>檀家でなくても参加できるイベント・体験が年2回以上ある</div>
-      <div class="check-item"><div class="check-box"></div>LINE公式アカウントがある</div>
-      <div class="check-item"><div class="check-box"></div>「非檀家からの法事・相談」を実際に受けたことがある</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">檀家でなくても参加できるイベント・体験が年2回以上ある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">LINE公式アカウントがある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">「非檀家からの法事・相談」を実際に受けたことがある</span></label>
     </div>
 
     <div class="check-group">
       <div class="check-group-label">収益（持続可能にする）</div>
-      <div class="check-item"><div class="check-box"></div>供養料・法事料以外の収入が年間10万円以上ある</div>
-      <div class="check-item"><div class="check-box"></div>「料金を聞かれたらすぐ答えられる」透明な価格体系がある</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">供養料・法事料以外の収入が年間10万円以上ある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">「料金を聞かれたらすぐ答えられる」透明な価格体系がある</span></label>
     </div>
 
     <div class="score-bar">
-      チェックした数：<strong>＿＿ ／ 13項目</strong><br>
-      <span style="font-size:.76rem;">0〜3：基盤整備フェーズ ／ 4〜7：発信開始フェーズ ／ 8〜11：成長フェーズ ／ 12〜13：先進寺院</span>
+      チェックした数：<strong id="scoreCount">0</strong> ／ <strong>12</strong>項目
+      <div class="score-track"><div class="score-fill" id="scoreBarFill"></div></div>
+      <div class="score-stage" id="scoreStage" style="color:var(--muted);">タップ／クリックして採点</div>
+      <div style="font-size:.72rem;margin-top:.5rem;color:var(--muted);">0〜3：基盤整備 ／ 4〜7：発信開始 ／ 8〜11：成長 ／ 12：先進寺院</div>
     </div>
   </div>
 </section>
@@ -683,5 +693,24 @@ footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.75rem;l
   <p style="margin-top:.5rem;">© 2025 にじいろAI ／ 無断転載禁止</p>
 </footer>
 
+<script>
+function updateScore() {
+  var cbs = document.querySelectorAll('.check-input');
+  var total = cbs.length;
+  var checked = 0;
+  cbs.forEach(function(cb){ if(cb.checked) checked++; });
+  document.getElementById('scoreCount').textContent = checked;
+  var pct = total > 0 ? (checked / total) * 100 : 0;
+  document.getElementById('scoreBarFill').style.width = pct + '%';
+  var stage, color;
+  if(checked <= 3){ stage = '基盤整備フェーズ（まずここを固めましょう）'; color = '#c0392b'; }
+  else if(checked <= 7){ stage = '発信開始フェーズ（いい土台があります）'; color = '#d35400'; }
+  else if(checked <= 11){ stage = '成長フェーズ（かなり進んでいます！）'; color = '#1a5f8b'; }
+  else { stage = '🎉 先進寺院レベルです！'; color = '#1a6b3c'; }
+  var stageEl = document.getElementById('scoreStage');
+  stageEl.textContent = stage;
+  stageEl.style.color = color;
+}
+</script>
 </body>
 </html>
