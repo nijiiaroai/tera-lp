@@ -35,8 +35,11 @@ body{
   min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
 }
 .cover::before{
-  content:'卍';position:absolute;font-size:400px;opacity:.04;
-  top:50%;left:50%;transform:translate(-50%,-50%);color:var(--gold);pointer-events:none;
+  content:'';position:absolute;
+  width:340px;height:420px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 250' fill='white'%3E%3Crect x='15' y='232' width='170' height='14'/%3E%3Crect x='35' y='220' width='130' height='14'/%3E%3Crect x='52' y='172' width='96' height='50'/%3E%3Cpolygon points='-4,172 100,142 204,172'/%3E%3Crect x='-4' y='167' width='208' height='7'/%3E%3Crect x='66' y='132' width='68' height='42'/%3E%3Cpolygon points='20,132 100,106 180,132'/%3E%3Crect x='18' y='127' width='164' height='7'/%3E%3Crect x='78' y='96' width='44' height='38'/%3E%3Cpolygon points='42,96 100,72 158,96'/%3E%3Crect x='40' y='91' width='120' height='7'/%3E%3Crect x='95' y='58' width='10' height='36'/%3E%3Cellipse cx='100' cy='56' rx='14' ry='5'/%3E%3Cellipse cx='100' cy='48' rx='10' ry='4'/%3E%3Cellipse cx='100' cy='41' rx='7' ry='3'/%3E%3Cpolygon points='93,41 100,26 107,41'/%3E%3C/svg%3E") no-repeat center/contain;
+  opacity:.07;
+  top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;
 }
 .cover-badge{
   display:inline-block;background:var(--gold);color:var(--brown-d);
